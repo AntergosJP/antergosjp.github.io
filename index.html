@@ -1,68 +1,370 @@
 <!DOCTYPE html>
-<html lang="ja"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="ja">
+  <head>
     <meta charset="utf-8">
-    <title>ホーム - AntergosJP</title>
+    <title>Antergos Japanese Team</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Antergos Japanese Team Page">
+    <meta name="description" content="Arch Linuxベースで使いやすいLinuxディストリビューション、Antergosの日本語チーム">
     <meta name="author" content="AntergosJP">
 
     <!-- Le styles -->
     <link href="bootstrap.css" rel="stylesheet">
     <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #333333;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 50px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+	color: #333333;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="https://si0.twimg.com/profile_images/3732101757/1e8801ca5179583b78e5e5b32bdf2cdd.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-</head>
-<body>
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://antergos.com/wp-content/uploads/2013/04/favicon.png">
+  </head>
 
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="">Antergos</a>
-	   <div class="nav-collapse collapse">
+  <body>
 
-            <ul class="nav">
-	      <li class="active"><a href="">　ホーム　</a></li>
-              <li><a href="download.html">　ダウンロード　</a></li>
-              <li><a href="http://antergos.com">　Antergos(本家)　</a></li>
-            </ul>
 
-	    <form class="navbar-search pull-right" action="https://www.google.co.jp/search?" method="GET">
-             <input type="text" id="inp" class="search-query span2 line" name="q" placeholder="Google検索" />
-            </form>
-          </div><!--/.nav-collapse -->
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">Antergos</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">ホーム</a></li>
+                <li><a href="http://antergos.com/category/news/">ニュース</a></li>
+                <li><a href="http://antergos.com/try-it/">ダウンロード</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">コミュニティ <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://forum.antergos.com/">フォーラム</a></li>
+                    <li><a href="http://wiki.antergos.com/">Antergos Wiki</a></li>
+                    <li><a href="http://webchat.freenode.net/?channels=antergos&uio=d4">IRC</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">開発 <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://www.transifex.com/projects/p/antergos/">翻訳</a></li>
+                    <li><a href="http://bugs.antergos.com/">バグ報告</a></li>
+                    <li><a href="https://github.com/antergos">ソースコード</a></li>
+                    <li><a href="http://antergos.com/master-keys/">認証鍵</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">案内 <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.antergos.com/team/">開発チーム</a></li>
+                    <li><a href="http://antergos.com/about/">Antergosについて</a></li>
+                    <li><a href="http://antergos.com/contact/">連絡先</a></li>
+                    <li><a href="http://www.antergos.com/partners">パートナー</a></li>
+                  </ul>
+                </li>
+		<li><a href="http://antergos.com/donate/">寄付</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" style="background-color: #E7E7E7">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+	      <img src="antergos-logo.png" alt="Antergos" /><br>
+              <p><a class="btn btn-large btn-success" href="http://antergos.com/about/">Antergosについて学ぶ</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <div class="carousel-caption">
+	      <!--img src="desktop.png" align="left"/-->
+              <h1>すぐに使える</h1><br>
+              <p class="lead">お好きなデスクトップ環境をグラフィカルインストーラーで選択できます</p>
+              <p><a class="btn btn-large btn-primary" href="http://antergos.com/try-it/">ダウンロード</a></p>
+	     </div>
+            </div>
+          </div>
          </div>
+        </div>
       </div>
-    </div><!--/.navbar -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
 
     <div class="container">
-     <div class="hero-unit">
       <div class="row">
-       <h1>Antergos</h1>
-       <h3>Arch Linuxベースだけど簡単に使えるLinuxディストリビューション</h3>
-       <h2><a class="btn btn-success btn-large" href="download.html"><font size="5" color="white">ダウンロード</font></a></h2>
-       </div>
-      </div>
-
-    </div><!--/.container-->
+        <div class="span4">
+          <h2>ローリングリリース</h2>
+          <p>Antergos は Arch Linux を父に持つ、ローリングリリースを採用したディストリビューションです。これは Ubuntu や Fedora のように新しいバージョンをダウンロードしてくる心配はいらないということです。</p>
+	  <p>ローリングリリースを採用したことにより、常に最新のアップデートを利用できます。システムの定期的な更新を行うことで、パッケージマネージャーによって必要なものがダウンロードされます。</p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <h2>すぐ使える</h2>
+          <p>Antergos には必要なものが最初から入っています。デフォルトの状態ですぐに使えるよう設定済みです。エレガントかつシンプルで、また同時にパワフルでもあります。</p>
+	  <p>インストールが完了したら準備は完了です。これ以上の手順は必要ありません。あとはコンピューターを再起動するだけです。…そしてお楽しみ下さい。</p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <h2>多言語対応</h2>
+          <p>日本語、スペイン語、ギリシャ語、カタロニア語、英語、ドイツ語、それ以外にも多くの言語に対応しています。Antergosはあなたの母国語で最高の体験を提供します。</p>
+	  <p>Live起動中や、私達のグラフィカルインストーラーでも多言語対応により簡単にインストールできます。</p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
 
     <!-- Le javascript
-================================================== -->
+    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
     <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
@@ -77,5 +379,14 @@
     <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
     <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-carousel.js"></script>
     <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-typeahead.js"></script>
-
-</body></html>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="http://twitter.github.io/bootstrap/assets/js/holder/holder.js"></script>
+  </body>
+</html>
