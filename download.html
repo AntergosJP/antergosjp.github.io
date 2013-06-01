@@ -13,42 +13,73 @@
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="https://si0.twimg.com/profile_images/3732101757/1e8801ca5179583b78e5e5b32bdf2cdd.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-</head>
-<body>
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://antergos.com/wp-content/uploads/2013/04/favicon.png">
+  </head>
 
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="">Antergos</a>
-	   <div class="nav-collapse collapse">
+  <body>
 
-            <ul class="nav">
-              <li><a href="index.html">　ホーム　</a></li>
-	      <li class="active"><a href="">　ダウンロード　</a></li>
-              <li><a href="http://antergos.com">　Antergos(本家)　</a></li>
-            </ul>
 
-	    <form class="navbar-search pull-right" action="https://www.google.co.jp/search?" method="GET">
-             <input type="text" id="inp" class="search-query span2 line" name="q" placeholder="Google検索" />
-            </form>
-          </div><!--/.nav-collapse -->
-         </div>
-      </div>
-    </div><!--/.navbar -->
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="index.html">Antergos</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="http://antergos.com/category/news/">ニュース</a></li>
+                <li class="active"><a href="#">ダウンロード</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">コミュニティ <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://forum.antergos.com/">フォーラム</a></li>
+                    <li><a href="http://wiki.antergos.com/">Antergos Wiki</a></li>
+                    <li><a href="http://webchat.freenode.net/?channels=antergos&uio=d4">IRC</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">開発 <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://www.transifex.com/projects/p/antergos/">翻訳</a></li>
+                    <li><a href="http://bugs.antergos.com/">バグ報告</a></li>
+                    <li><a href="https://github.com/antergos">ソースコード</a></li>
+                    <li><a href="http://antergos.com/master-keys/">認証鍵</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">案内 <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.antergos.com/team/">開発チーム</a></li>
+                    <li><a href="http://antergos.com/about/">Antergosについて</a></li>
+                    <li><a href="http://antergos.com/contact/">連絡先</a></li>
+                    <li><a href="http://www.antergos.com/partners">パートナー</a></li>
+                  </ul>
+                </li>
+		<li><a href="http://antergos.com/donate/">寄付</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
 
     <div class="container">
       <div class="hero-unit">
