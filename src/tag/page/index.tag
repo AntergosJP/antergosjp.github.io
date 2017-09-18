@@ -69,6 +69,7 @@
 
     .carousel {
       height: 50vh !important;
+      min-height: 450px !important;
     }
 
     .carousel-item {
@@ -83,11 +84,13 @@
 
     .numix-icon {
       margin-right: 1.5rem;
+      max-width: 50vw;
     }
 
     .carousel-item h2 {
       font-size: 4rem !important;
       margin-bottom: 3rem;
+      line-height: 1em !important;
     }
 
     .carousel-item p {
@@ -130,6 +133,28 @@
 
     .triple {
       padding: 3rem 0;
+    }
+
+    @media screen and (max-width: 599px) {
+      .carousel-item h2 {
+        font-size: 3rem !important;
+        margin-bottom: 2rem;
+        line-height: 1em !important;
+      }
+
+      .carousel-item p {
+        font-size: 1.25rem !important;
+      }
+
+      .numix-icon {
+        margin: 0 !important;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .numix-icon {
+        margin: 0 !important;
+      }
     }
   </style>
 
