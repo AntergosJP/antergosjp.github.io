@@ -11,150 +11,26 @@
 
 		<title>Antergos Japanese Team (AntergosJP)</title>
 
-		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.css" rel="stylesheet">
-
-		<!-- Just for debugging purposes. Don't actually copy this line! -->
-		<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- ローディングバー　他のcssより上に記載しておくこと -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-loading-bar.min.css" />
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 
-		<!-- Custom styles for this template -->
-		<link href="css/carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="//cdn.plusminus.io/css/webkoruri/20140628/webkoruri-force.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:200,400">
+        <link rel="stylesheet" href="./static/css/font.css">
 	</head>
 	<body>
-		<div class="navbar-wrapper">
-			<div class="container">
-				<div class="container navbar navbar-inverse navbar-fixed-top" role="navigation">
-					<div class="container">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="index.html">AntergosJP</a>
-						</div>
-						<div class="navbar-collapse collapse">
-							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html">ホーム</a></li>
-								<li><a href="http://antergos.com/news/">ニュース (en)</a></li>
-								<li><a href="download.html">ダウンロード</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">コミュニティ<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="http://forum.antergos.com/">フォーラム (en)</a></li>
-										<li><a href="http://wiki.antergos.com/">Antergos Wiki (en)</a></li>
-										<li><a href="http://webchat.freenode.net/?channels=antergos&uio=d4">IRC</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">開発<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="https://www.transifex.com/projects/p/antergos/">翻訳</a></li>
-										<li><a href="http://bugs.antergos.com/">バグ報告 (en)</a></li>
-										<li><a href="https://github.com/antergos">ソースコード (GitHub)</a></li>
-										<li><a href="http://antergos.com/master-keys/">認証鍵 (en)</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">案内<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="http://antergos.com/team/">開発チーム (en)</a></li>
-										<li><a href="about.html">Antergosについて</a></li>
-										<li><a href="http://antergos.com/contact/">連絡先 (en)</a></li>
-										<li><a href="http://antergos.com/partners">パートナー (en)</a></li>
-									</ul>
-								</li>
-								<li><a href="http://antergos.com/donate/">寄付 (en)</a></li>
-							</ul>
-						</div>
-					</div>
-				</div><!-- /.navbar -->
-			</div>
-		</div><!-- /.navbar-wrapper -->
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="item active">
-					<div class="container"><center>
-						<div class="col-lg-4">
-							<h1><b>Antergos</b></h1>
-							<h3>Arch Linuxベースの使いやすいディストリビューション</h3><br />
-							<p><a class="btn btn-lg btn-success" href="about.html">Antergosについて学ぶ</a></p>
-						</div>
-						<div class="col-lg-8">
-							<img src="img/antergos-logo.png" class="img-responsive">
-						</div></center>
-					</div>
-				</div>
-				<div class="item">
-					<div class="container"><center>
-						<div class="col-lg-4">
-							<h1><b>すぐ使える</b></h1>
-							<h3>お好きなデスクトップ環境を<br>グラフィカルインストーラーで選択できます</h3><br />
-							<p><a class="btn btn-lg btn-primary" href="download.html">ダウンロード</a></p>
-						</div>
-						<div class="col-lg-8">
-							<img src="img/desktop.png" class="img-responsive">
-						</div></center>
-					</div>
-				</div>
-			</div>
-			<a class="left carousel-control btn btn-lg btn-default" href="#myCarousel" data-slide="prev"><h1><span class="entypo-left-open"></span></h1></a>
-			<a class="right carousel-control btn btn-lg btn-default" href="#myCarousel" data-slide="next"><h1><span class="entypo-right-open"></span></h1></a>
-		</div><!-- /.carousel -->
+		<app></app>
 
-
-
-		<!-- Marketing messaging and featurettes
-		================================================== -->
-		<!-- Wrap the rest of the page in another container to center all the content. -->
-
-		<div class="container">
-
-			<!-- Three columns of text below the carousel -->
-			<div class="row">
-				<div class="col-lg-4">
-					<h3><span class="entypo-arrows-ccw"></span> ローリングリリース</h3>
-					<p>Antergos は Arch Linux をベースとした、ローリングリリースを採用したディストリビューションです。これは Ubuntu や Fedora のように新しいバージョンをダウンロードしてくる心配はいらないということです。</p>
-					<p>ローリングリリースを採用したことにより、常に最新のアップデートを利用できます。システムの定期的な更新を行うことで、パッケージマネージャーによって必要なものがダウンロードされます。</p>
-				</div><!-- /.col-lg-4 -->
-				<div class="col-lg-4">
-					<h3><span class="entypo-monitor"></span> すぐ使える</h3>
-					<p>Antergos には必要十分なものが最初から入っています。デフォルトの状態ですぐに使えるよう設定済みです。エレガントかつシンプルで、また同時にパワフルでもあります。</p>
-					<p>インストールに成功したら準備は完了です。これ以上の手順は必要ありません。あとはコンピューターを再起動するだけです。…そしてお楽しみ下さい。</p>
-				</div><!-- /.col-lg-4 -->
-				<div class="col-lg-4">
-					<h3><span class="entypo-chat"></span> 多言語対応</h3>
-					<p>日本語、スペイン語、ギリシャ語、カタロニア語、英語、ドイツ語、といったような多くの異なる言語で利用できます。Antergosはあなたの母国語で最高の体験を提供します。</p>
-					<p>Live起動中や、グラフィカルインストーラーでも多言語対応により簡単にインストールできます。</p>
-				</div><!-- /.col-lg-4 -->
-			</div><!-- /.row -->
-		</div>
-		<div class="container">
-			<hr>
-
-			<!-- FOOTER -->
-			<footer>
-				<p>Copyright &copy; 2013-2014 Antergos Japanese Team.</p>
-			</footer>
-
-		</div><!-- /.container -->
-
-
-		<!-- Bootstrap core JavaScript
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="js/jquery-1.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-</body></html>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="./static/js/bundle.js"></script>
+    </body>
+</html>
