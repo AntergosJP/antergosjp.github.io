@@ -1,0 +1,31 @@
+{
+  "name": "antergosjp.github.io",
+  "version": "1.0.0",
+  "description": "antergosjp website",
+  "main": "index.js",
+  "repository": "https://github.com/AntergosJP/antergosjp.github.io.git",
+  "author": "Antergos Japanese Team <admin@mail.antergos.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015-riot": "^1.1.0",
+    "eslint": "^4.7.0",
+    "riot-tag-loader": "^1.0.0",
+    "shx": "^0.2.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2",
+    "yarn-run-all": "^3.1.1"
+  },
+  "dependencies": {
+    "riot": "^3.7.0",
+    "riot-router": "^0.9.7"
+  },
+  "scripts": {
+    "test": "echo にゃ～ん",
+    "build:pre": "shx mkdir -p ./static/js",
+    "build": "webpack",
+    "watch:server": "webpack-dev-server --inline",
+    "watch": "npm-run-all build:pre watch:server"
+  }
+}
