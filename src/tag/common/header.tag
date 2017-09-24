@@ -28,7 +28,7 @@
                 案内<i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-            <li><a href="https://antergos.com/donate/">寄付 (en)</a></li>
+            <li><a href="https://antergos.com/donate/">寄付 (en)<i class="material-icons right">exit_to_app</i></a></li>
           </ul>
           <ul id="community-dropdown" class="dropdown-content grey lighten-3">
             <li><a href="https://forum.antergos.com/">フォーラム (en)<i class="material-icons right">exit_to_app</i></a></li>
@@ -52,7 +52,7 @@
     </div>
     <div>
       <ul class="side-nav" id="mobile-menu">
-        <li><a href="https://antergos.com/news/">ニュース (en)</a></li>
+        <li><a href="https://antergos.com/news/">ニュース (en)<i class="material-icons right">exit_to_app</i></a></li>
         <li><a href="#/download">ダウンロード</a></li>
         <li>
           <a href="javascript:void(0);" class="mobile-dropdown-button" data-activates="mobile-community-dropdown">
@@ -68,7 +68,7 @@
             案内<i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
-        <li><a href="https://antergos.com/donate/">寄付 (en)</a></li>
+        <li><a href="https://antergos.com/donate/">寄付 (en)<i class="material-icons right">exit_to_app</i></a></li>
       </ul>
       <ul id="mobile-community-dropdown" class="dropdown-content grey lighten-3">
         <li><a href="https://forum.antergos.com/">フォーラム (en)<i class="material-icons right">exit_to_app</i></a></li>

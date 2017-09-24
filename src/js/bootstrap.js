@@ -22,6 +22,7 @@ router.routes([
 
 router.on('route:updated', () => {
   window.__event.trigger('hashChanged', location.hash);
+  window.scrollTo(0, 0);
 });
 
 // EventWorker.register('fileSelected', 'readJson');
