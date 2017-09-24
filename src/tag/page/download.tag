@@ -60,7 +60,7 @@
           使用する場合は自己責任です。
         </p>
 
-        <a class="waves-effect waves-light btn" href="https://build.antergos.com/">Antergos Build Server</a>
+        <a class="waves-effect waves-light btn" href="https://antergoscommunityeditions.wordpress.com/">Antergos Community Editions</a>
       </div>
     </div>
   </div>
