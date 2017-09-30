@@ -35,23 +35,23 @@
 
     <ul class="collection">
       <li class="collection-item avatar">
-        <img src="http://furyu.nazo.cc/twicon/lindwurm/original" alt="" class="circle">
+        <img src="https://github.com/lindwurm.png" alt="" class="circle">
         <span class="title">lindwurm (Coordinator)</span>
       </li>
       <li class="collection-item avatar">
-        <img src="http://furyu.nazo.cc/twicon/enkunkun/original" alt="" class="circle">
+        <img src="https://github.com/enkunkun.png" alt="" class="circle">
         <span class="title">enkunkun</span>
       </li>
       <li class="collection-item avatar">
-        <img src="http://furyu.nazo.cc/twicon/hiyokotaisa/original" alt="" class="circle">
+        <img src="https://github.com/hiyokotaisa.png" alt="" class="circle">
         <span class="title">hiyokotaisa</span>
       </li>
       <li class="collection-item avatar">
-        <img src="http://furyu.nazo.cc/twicon/mohemohe/original" alt="" class="circle">
+        <img src="https://github.com/mohemohe.png" alt="" class="circle">
         <span class="title">mohemohe</span>
       </li>
       <li class="collection-item avatar">
-        <img src="http://furyu.nazo.cc/twicon/polamjag/original" alt="" class="circle">
+        <img src="https://github.com/polamjag.png" alt="" class="circle">
         <span class="title">polamjag</span>
       </li>
     </ul>
