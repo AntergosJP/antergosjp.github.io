@@ -13,7 +13,7 @@
     </p>
 
     <div class="row">
-      <div class="col s12 m6 push-m6">
+      <div class="col s12 l6 push-l6">
         <div class="card blue-grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">情報</span>
@@ -33,15 +33,36 @@
         <li class="tab"><a href="#tab3" class="blue-text text-darken-3">コミュニティー版</a></li>
       </ul>
       <div id="tab1" class="col s12 tabcontent">
+        <div class="row">
+          <div class="col s12 l6">
+            <h5>Antergos Live ISO</h5>
+
+            <p><a class="waves-effect waves-light btn" href="http://download.antergos.jp/iso/release/antergos-latest-x86_64.iso">Download ISO</a></p>
+            <p><a class="waves-effect waves-light btn" href="http://download.antergos.jp/iso/release/antergos-latest-x86_64.iso.torrent">Download Torrent</a></p>
+
+            <ul class="collection">
+              <li class="collection-item">sig: <a href="http://download.antergos.jp/iso/release/antergos-latest-x86_64.iso.sig">antergos-latest-x86_64.iso.sig</a></li>
+            </ul>
+          </div>
+          <div class="col s12 l6">
+            <h5>Antergos Minimal ISO</h5>
+
+            <p><a class="waves-effect waves-light btn" href="http://download.antergos.jp/iso/release/antergos-minimal-latest-x86_64.iso">Download ISO</a></p>
+            <p><a class="waves-effect waves-light btn" href="http://download.antergos.jp/iso/release/antergos-minimal-latest-x86_64.iso.torrent">Download Torrent</a></p>
+
+            <ul class="collection">
+              <li class="collection-item">sig: <a href="http://download.antergos.jp/iso/release/antergos-minimal-latest-x86_64.iso.sig">antergos-minimal-latest-x86_64.iso.sig</a></li>
+            </ul>
+          </div>
+
+          <ul class="collection">
+            <li class="collection-item">MD5: <a href="http://download.antergos.jp/iso/release/MD5SUMS-latest">MD5SUMS-latest</a></li>
+          </ul>
+        </div>
         <p>
-          本家のダウンロードページをご覧ください。
-        </p>
-        <p>
-          なお日本語環境での問題点として、日本語表示にビットマップフォントが使用されるため、インストール後に日本語を表示可能なフォントを導入することを推奨します (例: <a href="https://www.archlinux.org/packages/community/any/otf-ipafont/">community/otf-ipafont</a>,
+          日本語環境での問題点として、日本語表示にビットマップフォントが使用されるため、インストール後に日本語を表示可能なフォントを導入することを推奨します (例: <a href="https://www.archlinux.org/packages/community/any/otf-ipafont/">community/otf-ipafont</a>,
           <a href="https://aur.archlinux.org/packages/ttf-koruri">aur/ttf-koruri</a> など)。
         </p>
-
-        <a class="waves-effect waves-light btn" href="https://antergos.com/try-it/">TRYIT | Antergos</a>
       </div>
       <div id="tab2" class="col s12 tabcontent">
         <p>
