@@ -34,14 +34,22 @@
       </ul>
       <div id="tab1" class="col s12 tabcontent">
         <div class="row">
+          <div class="col s12 l12">
+            <p>
+              Antergos プロジェクト終了に伴い、 AntergosJP チームの日本サーバーによるミラー提供を終了を終了させていただきました。<br />
+              ご利用ありがとうございました。
+            </p>
+          </div>
+        </div>
+        <div class="row">
           <div class="col s12 l6">
             <h5>Antergos Live ISO { this.downloadApiResult != null ? this.downloadApiResult.version : '' }</h5>
 
-            <p><a class="waves-effect waves-light btn" href="{ this.downloadApiResult != null ? this.downloadApiResult.live.url : 'http://download.antergos.jp/iso/release/antergos-latest-x86_64.iso' }">Download ISO</a></p>
-            <p><a class="waves-effect waves-light btn" href="{ this.downloadApiResult != null ? this.downloadApiResult.live.url + '.torrent' : 'http://download.antergos.jp/iso/release/antergos-latest-x86_64.iso.torrent' }">Download Torrent</a></p>
+            <p><a class="waves-effect waves-light btn disabled" href="{ this.downloadApiResult != null ? this.downloadApiResult.live.url : 'http://download.antergos.jp/iso/release/antergos-latest-x86_64.iso' }">Download ISO</a></p>
+            <p><a class="waves-effect waves-light btn disabled" href="{ this.downloadApiResult != null ? this.downloadApiResult.live.url + '.torrent' : 'http://download.antergos.jp/iso/release/antergos-latest-x86_64.iso.torrent' }">Download Torrent</a></p>
 
             <ul class="collection">
-              <li class="collection-item">sig: <a href="{ this.downloadApiResult != null ? this.downloadApiResult.live.url + '.sig' : 'http://download.antergos.jp/iso/release/antergos-latest-x86_64.iso.sig' }">{ this.downloadApiResult != null ? this.downloadApiResult.live.filename + '.sig' : 'antergos-latest-x86_64.iso.sig' }</a></li>
+              <li class="collection-item">sig: <span>{ this.downloadApiResult != null ? this.downloadApiResult.live.filename + '.sig' : 'antergos-latest-x86_64.iso.sig' }</span></li>
             </ul>
 
             <ul class="collection">
@@ -51,11 +59,11 @@
           <div class="col s12 l6">
             <h5>Antergos Minimal ISO { this.downloadApiResult != null ? this.downloadApiResult.version : '' }</h5>
 
-            <p><a class="waves-effect waves-light btn" href="{ this.downloadApiResult != null ? this.downloadApiResult.minimal.url : 'http://download.antergos.jp/iso/release/antergos-minimal-latest-x86_64.iso' }">Download ISO</a></p>
-            <p><a class="waves-effect waves-light btn" href="{ this.downloadApiResult != null ? this.downloadApiResult.minimal.url + '.torrent' : 'http://download.antergos.jp/iso/release/antergos-minimal-latest-x86_64.iso.torrent' }">Download Torrent</a></p>
+            <p><a class="waves-effect waves-light btn disabled" href="{ this.downloadApiResult != null ? this.downloadApiResult.minimal.url : 'http://download.antergos.jp/iso/release/antergos-minimal-latest-x86_64.iso' }">Download ISO</a></p>
+            <p><a class="waves-effect waves-light btn disabled" href="{ this.downloadApiResult != null ? this.downloadApiResult.minimal.url + '.torrent' : 'http://download.antergos.jp/iso/release/antergos-minimal-latest-x86_64.iso.torrent' }">Download Torrent</a></p>
 
             <ul class="collection">
-              <li class="collection-item">sig: <a href="{ this.downloadApiResult != null ? this.downloadApiResult.minimal.url + '.sig' : 'http://download.antergos.jp/iso/release/antergos-minimal-latest-x86_64.iso.sig' }">{ this.downloadApiResult != null ? this.downloadApiResult.minimal.filename + '.sig' : 'antergos-minimal-latest-x86_64.iso.sig' }</a></li>
+              <li class="collection-item">sig: <span>{ this.downloadApiResult != null ? this.downloadApiResult.minimal.filename + '.sig' : 'antergos-minimal-latest-x86_64.iso.sig' }</span></li>
             </ul>
 
             <ul class="collection">
@@ -65,7 +73,7 @@
           </div>
 
           <ul class="collection">
-            <li class="collection-item">MD5ファイル: <a href="http://{ this.downloadApiResult != null ? 'mirror' : 'download' }.antergos.jp/iso/release/MD5SUMS-{ this.downloadApiResult != null ? this.downloadApiResult.version : 'latest' }">MD5SUMS-{ this.downloadApiResult != null ? this.downloadApiResult.version : 'latest' }</a></li>
+            <li class="collection-item">MD5ファイル: <span>MD5SUMS-{ this.downloadApiResult != null ? this.downloadApiResult.version : 'latest' }</span></li>
           </ul>
         </div>
         <p>
@@ -111,22 +119,22 @@
   </style>
 
   <script>
-    this.downloadApiResult = null;
+    this.downloadApiResult = {
+      "version": "19.3",
+      "live": {
+          "filename": "antergos-19.3-x86_64.iso",
+          "url": "http://mirror.antergos.jp/iso/release/antergos-19.3-x86_64.iso",
+          "md5": "b5a02f864c91827574e1f6a99b16bcc5"
+      },
+      "minimal": {
+          "filename": "antergos-minimal-19.3-x86_64.iso",
+          "url": "http://mirror.antergos.jp/iso/release/antergos-minimal-19.3-x86_64.iso",
+          "md5": "f7a72684abf32aabeb6e86bb80d350d6"
+      }
+    };
 
     this.on('mount', () => {
       $('ul.tabs').tabs();
-      this.fetchDownloadInfoAPI();
     });
-
-    fetchDownloadInfoAPI() {
-      fetch('https://api.antergos.jp/iso/download').then(req => {
-        return req.json();
-      }).then(json => {
-        this.downloadApiResult = json;
-        this.update();
-      });
-    }
-
-
   </script>
 </page-download>
