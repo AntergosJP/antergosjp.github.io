@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <title>AntergosJP</title>
+    <meta name="theme-color" content="#1565C0">
+    <meta name="description" content="Antergosの後継・代替となる主要なArch Linux派生ディストリビューションの紹介">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AntergosJP">
+    <meta property="og:description" content="Antergosの後継・代替となる主要なArch Linux派生ディストリビューションの紹介">
+    <meta property="og:url" content="https://antergosjp.github.io/">
+    <meta property="og:image" content="https://antergosjp.github.io/favicon.png">
+    <meta property="og:image:alt" content="AntergosJP favicon">
+    <meta property="og:site_name" content="AntergosJP">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AntergosJP">
+    <meta name="twitter:description" content="Antergosの後継・代替となる主要なArch Linux派生ディストリビューションの紹介">
+    <meta name="twitter:image" content="https://antergosjp.github.io/favicon.png">
+    <style>
+        /* -------------------------------------------------------------
+         * Materialize CSS & Antergos Palette
+         * ------------------------------------------------------------- */
+        :root {
+            --bg-color: #fcfcfc;
+            --card-bg: #ffffff;
+            --text-color: #212121;
+            --text-muted: #757575;
+            
+            /* Deep & Sharp Material Blue */
+            --primary-color: #1565C0; 
+            --primary-dark: #0d47a1;
+            --primary-light: #e3f2fd;
+            
+            /* Materialize z-depth-1 & z-depth-2 */
+            --shadow-1: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            --shadow-2: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+            
+            --border-radius: 2px;
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --card-bg: #1e1e1e;
+                --text-color: #e0e0e0;
+                --text-muted: #9e9e9e;
+                --primary-color: #64b5f6;
+                --primary-dark: #42a5f5;
+                --shadow-1: 0 2px 4px rgba(0,0,0,0.5);
+                --shadow-2: 0 4px 12px rgba(0,0,0,0.6);
+            }
+        }
+
+        /* -------------------------------------------------------------
+         * Base Reset
+         * ------------------------------------------------------------- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Roboto", "Segoe UI", Arial, "Noto Sans CJK JP", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            padding-bottom: 3rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* -------------------------------------------------------------
+         * Navbar / Header
+         * ------------------------------------------------------------- */
+        nav {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            box-shadow: var(--shadow-1);
+            padding: 1.75rem 0;
+            margin-bottom: 3rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            nav {
+                background-color: #1e1e1e;
+                color: var(--primary-color);
+                border-bottom: 1px solid #333;
+            }
+        }
+
+        nav h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            nav h1 {
+                color: var(--primary-color);
+            }
+        }
+
+        nav p {
+            font-size: 0.9rem;
+            color: #ffffff;
+            opacity: 0.85;
+            margin-top: 0.25rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            nav p {
+                color: var(--text-muted);
+            }
+        }
+
+        /* -------------------------------------------------------------
+         * Material Cards
+         * ------------------------------------------------------------- */
+        article.card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-1);
+            margin-bottom: 2rem;
+            transition: box-shadow 0.25s;
+            word-break: auto-phrase;
+        }
+
+        article.card:hover {
+            box-shadow: var(--shadow-2);
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        @media (prefers-color-scheme: light) {
+            .card-title {
+                color: var(--primary-color); /* タイトルも#1565C0に統一 */
+            }
+        }
+
+        .card-content p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .card-content p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* -------------------------------------------------------------
+         * Card Actions (Buttons)
+         * ------------------------------------------------------------- */
+        .card-action {
+            border-top: 1px solid rgba(160, 160, 160, 0.2);
+            padding: 16px 24px;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-flat {
+            color: var(--primary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 2px;
+            transition: background-color 0.2s;
+            display: inline-block;
+        }
+
+        .btn-flat:hover {
+            background-color: rgba(21, 101, 192, 0.08); /* #1565C0ベースの薄い背景 */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .btn-flat:hover {
+                background-color: rgba(100, 181, 246, 0.08);
+            }
+        }
+
+        /* -------------------------------------------------------------
+         * Footer
+         * ------------------------------------------------------------- */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            word-break: auto-phrase;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <h1>RIP Antergos</h1>
+            <p>Antergosの後継・代替となる主要なArch Linux派生ディストリビューションの紹介</p>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <article class="card" id="endeavouros">
+            <div class="card-content">
+                <div class="card-title">EndeavourOS</div>
+                <p>Antergosの元開発メンバーらが立ち上げた、事実上の後継プロジェクト。Antergosよりも素のArch Linuxに近く、インストール後の環境はユーザー自身が自由に育てていくスタイルです。</p>
+            </div>
+            <div class="card-action">
+                <a href="https://endeavouros.com/" target="_blank" rel="noopener noreferrer" class="btn-flat">公式サイト ↗</a>
+            </div>
+        </article>
+
+        <article class="card" id="manjaro">
+            <div class="card-content">
+                <div class="card-title">Manjaro</div>
+                <p>本家Archとは別に独自のテスト済みリポジトリを運用しており、パッケージ起因のトラブルが起きにくいのが特徴。優秀なGUI設定ツールやパッケージマネージャー（Pamac）が標準装備されており、手軽にArchの恩恵を受けられます。</p>
+            </div>
+            <div class="card-action">
+                <a href="https://manjaro.org/" target="_blank" rel="noopener noreferrer" class="btn-flat">公式サイト ↗</a>
+            </div>
+        </article>
+
+        <article class="card" id="cachyos">
+            <div class="card-content">
+                <div class="card-title">CachyOS</div>
+                <p>CPUアーキテクチャ（x86-64-v3/v4）に最適化されたコンパイル済みの独自リポジトリを持ち、とにかく動作が高速。btrfsの標準サポートやカーネルの手軽な切り替えなど、モダンな機能が洗練されたGUIで完結します。</p>
+            </div>
+            <div class="card-action">
+                <a href="https://cachyos.org/" target="_blank" rel="noopener noreferrer" class="btn-flat">公式サイト ↗</a>
+            </div>
+        </article>
+
+        <article class="card" id="archlinux">
+            <div class="card-content">
+                <div class="card-title">Arch Linux</div>
+                <p>インストールメディアに最初から対話型スクリプト <code>archinstall</code> が入っており、かつてのような全手動での環境構築をしなくても、数分でピュアなArch環境が手に入るようになりました。</p>
+            </div>
+            <div class="card-action">
+                <a href="https://archlinux.org/" target="_blank" rel="noopener noreferrer" class="btn-flat">公式サイト ↗</a>
+                <a href="https://wiki.archlinux.jp/" target="_blank" rel="noopener noreferrer" class="btn-flat">ArchWiki (日本語) ↗</a>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="container">
+        <p>Antergos Japanese Team (AntergosJP) は、かつて存在したArch Linux派生ディストリビューション、Antergosの普及を目指して翻訳やPull Requestを通じた日本語環境の改善、日本国内のミラーサーバーを提供する有志による日本語チームでした。ここはその跡地です。</p>
+    </footer>
+
+</body>
+</html>
